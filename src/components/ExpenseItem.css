@@ -1,0 +1,25 @@
+.expecont{
+    display: flex;
+    background-color: rgb(89, 98, 89);
+    padding: 7px;
+    align-items: center;
+    
+}
+.date{
+    /* border-style:; */
+    padding: 4px;
+    
+}
+.info{
+    color: white;
+    font-size: 25px;
+    margin-left: 60px;
+}
+.expense{
+    margin-left: auto;
+    padding: 5px;
+    font-size: xx-large;
+    background-color: purple;
+    border-radius: 8px;
+    border: 2px solid white;
+}
