@@ -1,9 +1,9 @@
-.expecont{
+.Itemcont{
     display: flex;
     background-color: rgb(89, 98, 89);
     padding: 7px;
     align-items: center;
-    
+    margin:20px 0;
 }
 .date{
     /* border-style:; */
