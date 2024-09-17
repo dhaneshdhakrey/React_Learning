@@ -1,0 +1,12 @@
+.date{
+    /* display: flex; */
+    border:2px solid white;
+    border-radius:10px ;
+    padding: 4px;
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+}
+.month{
+
+}

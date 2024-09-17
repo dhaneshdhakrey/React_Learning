@@ -1,11 +1,11 @@
 import './ExpenseItem.css';
+import Edate from './date.js';
 function ExpenseItem(props) {
+    
     return (
         <div className='expecont'>
-            <div className='date'>
-                {props.date.toISOString()};
-                
-            </div>
+            
+            <Edate date ={props.date} />
             <div className='info'>
                 {props.title}
             </div>
