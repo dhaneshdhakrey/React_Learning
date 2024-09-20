@@ -37,7 +37,14 @@
     transform: rotate(360deg);
   }
 } */
-
+.NewExpenseCont{
+  /* text-align: center; */
+  display:flex;
+  justify-content: center;
+  /* width: 1300px; */
+ 
+  /* background-color: rgb(33, 33, 33) */
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,5 +1,5 @@
 import './Expensecont.css'
-import Card from './card.js';
+import Card from '../UI/card.js';
 
 import ExpenseItem from './ExpenseItem'
 
@@ -8,9 +8,12 @@ function ExpenseCont() {
   
   return (
     <Card className='main_cont'>
+      <div>
       <h2>Let's get started!</h2>
           <ExpenseItem title={arr[0].title} Amount={arr[0].Amount} date={arr[0].date} ></ExpenseItem>
           <ExpenseItem title={arr[1].title} Amount={arr[1].Amount} date={arr[1].date} ></ExpenseItem>
+          
+          </div>
     </Card>
   );
 }
