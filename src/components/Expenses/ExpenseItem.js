@@ -4,7 +4,7 @@ import './ExpenseItem.css';
 import Edate from './date.js';
 import Card from '../UI/card.js'
 function ExpenseItem(props) {
-    console.log("console log is executed once");
+    
     
     const [title,functiontoupdate]= useState(props.title);
     function clickHandler(){
