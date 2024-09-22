@@ -4,15 +4,18 @@ import Cont1 from './components/Expenses/Expensecont';
 import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
-  
+  let data;
+   function onNewExpenseHandler(DatatoAdd){
+      data={
+        ...DatatoAdd,
+      }
+   }
   return (
     <div>
       <div className=' NewExpenseCont'>
-    <NewExpense/>
+    <NewExpense onNewExpense={onNewExpenseHandler}/>
     </div>
-    <Cont1>
-    
-    </Cont1>
+    <Cont1 test={data} />
     </div>
   )
 };
