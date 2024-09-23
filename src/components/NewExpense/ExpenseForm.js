@@ -8,7 +8,7 @@ function ExpenseForm(props) {
         let expenseData={
             title:prevTitle,
             Amount:prevAmount,
-            Date:new Date(prevDate)
+            date:new Date(prevDate)
         }
         // console.log(expenseData);
         props.onSaveExpenseData(expenseData);
