@@ -4,7 +4,14 @@
     margin: 100px 100px;
     padding:30px 10px;
   }
+  /* .YearSelect{
+    text-align: right;
+    padding: 3px;
+  } */
   h2{
     color: green;
   }
-  
+  .header1{
+    display: flex;
+    
+  }

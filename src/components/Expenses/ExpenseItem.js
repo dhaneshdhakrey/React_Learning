@@ -4,8 +4,7 @@ import './ExpenseItem.css';
 import Edate from './date.js';
 import Card from '../UI/card.js'
 function ExpenseItem(props) {
-    
-    
+
     const [title,functiontoupdate]= useState(props.title);
     function clickHandler(){
         functiontoupdate('Updated!');
@@ -17,7 +16,7 @@ function ExpenseItem(props) {
             <div className='info'>
                 {props.title}
             </div>
-            <div className='expense'>{props.Amount} </div>
+            <div className='expense'>${props.Amount} </div>
             <button onClick={clickHandler}>Click me</button>
             
         </Card>
