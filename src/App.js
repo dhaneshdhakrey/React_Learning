@@ -10,8 +10,6 @@ function App() {
   let [prevExpense,updateNewExpense]=useState(arr1);
 
    function onNewExpenseHandler(Data){
-      
-      // console.log(data.title);
       updateNewExpense([Data,...prevExpense]);
    }
   return (
