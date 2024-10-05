@@ -6,7 +6,7 @@ import ExpenseItem from './ExpenseItem'
 
 
 function ExpenseCont(props) {
-  let [selectedYear,setSelectedYear]=useState('');
+  let [selectedYear,setSelectedYear]=useState('ALL');
 
   function YearFilterUpdater(e){
       setSelectedYear(e); 
