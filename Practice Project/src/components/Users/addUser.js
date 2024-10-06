@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import ErrorModel from '../UI/ErrorModel';
 import Card from '../UI/Card'
 import classes from './addUser.module.css';
 import Button from '../UI/Button'
@@ -6,8 +7,13 @@ function AddUser(props){
     function submitHandler(event){
         event.preventDefault();
         // props.temp(event);
-        if(currentAge.trim()==0||currentName.trim()==0)return;
-        if(+currentAge>0&&+currentAge<110){
+        if(currentAge.trim()==0||currentName.trim()==0){
+            setError({title:'Invalid! input',
+                content:'Please input Something (age>0)'
+            })
+            return;
+        }
+        if(+currentAge>0&&+currentAge<90){
         // console.log(currentName,currentAge);
         let a={
             Age:currentAge,
@@ -17,20 +23,32 @@ function AddUser(props){
         setAge('');
         setName('');}
         else{
-            alert("your age cant be real")
+            setError({
+                title:'An Error Occured!',
+                content:'Please input Valid input (age>0)'
+            })
         }
 
     }
     let [currentName,setName]=useState('');
     let [currentAge,setAge]=useState('');
-
+    let[currentError,setError]=useState();
     function nameHandler(event){
         setName(event.target.value);
     }
     function ageHandler(event){
         setAge(event.target.value);
     }
+    function errorHandler(){
+        // currentError=null;
+        setError(null);
+       
+    }
 return  (
+    <div>
+   {currentError && (
+      <ErrorModel title={currentError.title} content={currentError.content} onReset={errorHandler}/>
+    )}
     <Card cssClass={classes.input}>
         {/* hamara custome component banate hai umien jo sare default vale keywords hote hai jaise 'className' vagera kaam nahi karte  */}
 <form onSubmit={submitHandler}>
@@ -42,6 +60,8 @@ return  (
      Add User
     </Button>
 </form>
-</Card>);
+</Card>
+</div>
+ );
 }
 export default AddUser; 

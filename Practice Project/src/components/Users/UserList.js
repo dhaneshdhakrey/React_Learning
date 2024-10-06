@@ -6,7 +6,7 @@ function UserList(props) {
         <Card cssClass={classes.users}>
         <ul> 
             {props.Users.map((user) => (
-                <li >
+                <li key={Math.random()} >
                     {user.Name} {user.Age} years old
                 </li>
             ))}
