@@ -7,7 +7,7 @@ function AddUser(props){
     function submitHandler(event){
         event.preventDefault();
         // props.temp(event);
-        if(currentAge.trim()==0||currentName.trim()==0){
+        if(currentAge.trim()===0||currentName.trim()===0){
             setError({title:'Invalid! input',
                 content:'Please input Something (age>0)'
             })
