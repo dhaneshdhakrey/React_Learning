@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState,useContext } from 'react';
+import AuthContext from '../../contest-auth/loggedin-pass';
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
@@ -44,9 +44,10 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(enteredEmail, enteredPassword);
+    //props.onLogin(enteredEmail, enteredPassword);
+    ctx.doLogin(enteredEmail,enteredPassword);
   };
-
+  let ctx=useContext(AuthContext);
   return (
     <Card className={classes.login}>
       <form onSubmit={submitHandler}>
